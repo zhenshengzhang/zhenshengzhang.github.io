@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>ubuntu安装php7.2</title>
+      <link href="/2020/06/17/ubuntu-an-zhuang-php7.2-php-fpm/"/>
+      <url>/2020/06/17/ubuntu-an-zhuang-php7.2-php-fpm/</url>
+      
+        <content type="html"><![CDATA[<h2 id="添加源地址"><a href="#添加源地址" class="headerlink" title="添加源地址"></a>添加源地址</h2><p>执行三条命令,添加php的源地址，更新，安装</p><pre><code>sudo apt-get install software-properties-commonsudo add-apt-repository -y ppa:ondrej/phpsudo apt-get updatesudo apt-get install php7.2</code></pre><h2 id="查看有没有php7的包"><a href="#查看有没有php7的包" class="headerlink" title="查看有没有php7的包"></a>查看有没有php7的包</h2><pre><code>sudo apt list | grep php</code></pre><h2 id="安装PHP"><a href="#安装PHP" class="headerlink" title="安装PHP"></a>安装PHP</h2><p><code>nginx</code>使用php的话要用到<code>php7.2-fpm</code>,所以要安装</p><pre><code>sudo apt-get install php7.2-mysql php7.2-fpm php7.2-curl php7.2-xml php7.2-gd php7.2-mbstring php-memcached php7.2-zip</code></pre><h2 id="配置php-fpm"><a href="#配置php-fpm" class="headerlink" title="配置php-fpm"></a>配置php-fpm</h2><p>修改配置监听<code>9000</code>端口来处理<code>nginx</code>的请求(这种方法一般在windows上使用),</p><p>另一种方法linux下使用sock方法速度会更快，这个地方也可以不修改，真使用里面  <code>/run/php/php7.2-fpm.sock</code> 这样的路径，后面nginx也要设置成这种格式  <code>fastcgi_pass unix:/run/php/php7.2-fpm.sock</code>;</p><p>打开 <code>/etc/php/7.2/fpm/pool.d/www.conf</code> 文件找到如下位置注释第一行添加第二行</p><pre><code>;listen = /run/php/php7.2-fpm.socklisten = 127.0.0.1:9000</code></pre><p>修改权限</p><pre><code>chmod 777 /run/php/php7.2-fpm.sock</code></pre><p>打开nginx的配置文件 <code>/etc/nginx/sites-available/default</code> (也可以自己在其它地方添加配置文件,这个地方是默认的配置地方)</p><pre><code>server {    listen       80; #监听80端口，接收http请求    server_name  www.example.com; #就是网站地址    root /usr/local/etc/nginx/www/huxintong_admin; # 准备存放代码工程的路径    #路由到网站根目录www.example.com时候的处理    location / {        index index.php; #跳转到www.example.com/index.php        autoindex on;    }      #当请求网站下php文件的时候，反向代理到php-fpm    location ~ \.php$ {        fastcgi_split_path_info ^(.+\.php)(/.+)$;        fastcgi_pass 127.0.0.1:9000;#nginx fastcgi进程监听的IP地址和端口        #fastcgi_pass unix:/run/php/php7.2-fpm.sock;        fastcgi_index index.php;        include fastcgi_params;    }}</code></pre><h2 id="启动php7-2-fpm"><a href="#启动php7-2-fpm" class="headerlink" title="启动php7.2-fpm"></a>启动php7.2-fpm</h2><p>有时候安装完成后不知道安装到什么地方啦可以使用下面命令查找下</p><pre><code>whereis php-fpm</code></pre><h2 id="启动php-fpm"><a href="#启动php-fpm" class="headerlink" title="启动php-fpm"></a>启动php-fpm</h2><pre><code>sudo service php7.2-fpm start</code></pre><h2 id="查看是否启动成功"><a href="#查看是否启动成功" class="headerlink" title="查看是否启动成功"></a>查看是否启动成功</h2><pre><code>netstat -lnt | grep 9000</code></pre><h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><pre><code>sudo service php7.2-fpm restart</code></pre><blockquote><p>本文转自<a href="http://www.zhaokeli.com/article/8496.html" target="_blank" rel="noopener">ubuntu安装php7.2，php-fpm</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> php </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> php </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>docker 常用命令</title>
       <link href="/2020/05/22/docker/"/>
       <url>/2020/05/22/docker/</url>
