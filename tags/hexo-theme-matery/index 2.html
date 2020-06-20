@@ -232,7 +232,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/medias/banner/6.jpg)');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
 </script>
 
 
@@ -261,10 +261,19 @@
                 </a>
                 
                 
+                <a href="/tags/php/" title="php: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="php" style="background-color: #F5EEF8;">php
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/Hexo/" title="Hexo: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Hexo" style="background-color: #F5EEF8;">Hexo
+                            data-tagname="Hexo" style="background-color: #D5F5E3;">Hexo
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -273,17 +282,8 @@
                 <a href="/tags/hexo-theme-matery/" title="hexo-theme-matery: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="hexo-theme-matery" style="background-color: #D5F5E3;">hexo-theme-matery
+                            data-tagname="hexo-theme-matery" style="background-color: #E8F8F5;">hexo-theme-matery
                         <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/php/" title="php: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="php" style="background-color: #E8F8F5;">php
-                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -457,7 +457,6 @@ $(function () {
             bp.src = 'http://push.zhanzhang.baidu.com/push.js';
         }
         var s = document.getElementsByTagName("script")[0];
-        console.log(s);
         s.parentNode.insertBefore(bp, s);
     })();
 </script>
