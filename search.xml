@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>永久激活jetbrains全家桶</title>
+      <link href="/2020/06/24/yong-jiu-ji-huo-jetbrains-quan-jia-tong/"/>
+      <url>/2020/06/24/yong-jiu-ji-huo-jetbrains-quan-jia-tong/</url>
+      
+        <content type="html"><![CDATA[<h2 id="激活教程"><a href="#激活教程" class="headerlink" title="激活教程"></a>激活教程</h2><ol><li>下载补丁得到<a href="http://lookdiv.com/jetbrains-agent.jar" target="_blank" rel="noopener">jetbrains-agent-latest.jar</a></li><li>启动你的IDE，如果上来就需要激活，选择：试用（Evaluate for free）进入IDE。 </li><li>将jetbrains-agent-latest.jar拖进IDE窗口</li><li>默认下一步即可 </li><li>检查一下到期时间，2089年，哈哈哈激活成功了！</li></ol><p><img src="/images/jetbrains_20200624_1.jpg" alt=""><br><img src="/images/jetbrains_20200624_2.jpg" alt=""><br><img src="/images/jetbrains_20200624_3.jpg" alt=""><br><img src="/images/jetbrains_20200624_4.jpg" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> phpstorm </tag>
+            
+            <tag> goland </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ubuntu安装php7.2</title>
       <link href="/2020/06/17/ubuntu-an-zhuang-php7.2/"/>
       <url>/2020/06/17/ubuntu-an-zhuang-php7.2/</url>

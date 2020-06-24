@@ -199,6 +199,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -783,7 +796,7 @@ listen = 127.0.0.1:9000</code></pre><p>修改权限</p>
         recordIP: 'true',
         pageSize: '10',
         lang: 'zh-cn',
-        placeholder: 'just go go'
+        placeholder: '建议在上方留下昵称和邮箱等信息，以便收到回复通知（以下三选一）：\n 1、仅在昵称中留下QQ号（系统自动获取QQ昵称、QQ邮箱、QQ头像等信息）\n 2、自定义填写昵称、邮箱、网址信息（系统自动匹配头像）\n 3、匿名留言（不会收到留言回复通知，不推荐）'
     });
 </script>
 
@@ -796,51 +809,53 @@ listen = 127.0.0.1:9000</code></pre><p>修改权限</p>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/06/17/ubuntu-an-zhuang-php7.2/">
+                <a href="/2020/06/24/yong-jiu-ji-huo-jetbrains-quan-jia-tong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="ubuntu安装php7.2">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="永久激活jetbrains全家桶">
                         
-                        <span class="card-title">ubuntu安装php7.2</span>
+                        <span class="card-title">永久激活jetbrains全家桶</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            添加源地址执行三条命令,添加php的源地址，更新，安装
-sudo apt-get install software-properties-common
-sudo add-apt-repository -y ppa:ondrej/php
-su
+                            激活教程
+下载补丁得到jetbrains-agent-latest.jar
+启动你的IDE，如果上来就需要激活，选择：试用（Evaluate for free）进入IDE。 
+将jetbrains-agent-latest.jar拖进IDE
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/php/" class="post-category">
-                                    php
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/php/">
-                        <span class="chip bg-color">php</span>
+                    <a href="/tags/phpstorm/">
+                        <span class="chip bg-color">phpstorm</span>
+                    </a>
+                    
+                    <a href="/tags/goland/">
+                        <span class="chip bg-color">goland</span>
                     </a>
                     
                 </div>
