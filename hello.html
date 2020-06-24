@@ -199,6 +199,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -788,7 +801,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.itzzs.xin/2020/05/07/hello/">http://www.itzzs.xin/2020/05/07/hello/</a>
+                    <a href="http://www.itzzs.xin/hello.html">http://www.itzzs.xin/hello.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1121,9 +1134,11 @@
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
         avatar: 'monsterid',
+        enableQQ: 'true',
+        recordIP: 'true',
         pageSize: '10',
         lang: 'zh-cn',
-        placeholder: 'just go go'
+        placeholder: '建议在上方留下昵称和邮箱等信息，以便收到回复通知（以下三选一）：\n 1、仅在昵称中留下QQ号（系统自动获取QQ昵称、QQ邮箱、QQ头像等信息）\n 2、自定义填写昵称、邮箱、网址信息（系统自动匹配头像）\n 3、匿名留言（不会收到留言回复通知，不推荐）'
     });
 </script>
 
@@ -1140,7 +1155,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/22/php-ext-v8js/">
+                <a href="/php-ext-v8js.html">
                     <div class="card-image">
                         
                         
@@ -1191,7 +1206,7 @@ Mac OS :10
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/07/hello/">
+                <a href="/hello.html">
                     <div class="card-image">
                         
                         
